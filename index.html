@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="background-color: black;">
+
+<body>
+    <form>
+        <div style="text-align: center;">
+            <input style="background-color:black; color: white; margin:50px; padding: 10px; width: 500px; font-size: 100px; text-align: center" type="text" id="numero" value="0" />}
+        </div>
+        <div style="text-align: center;">
+            <input style="margin: 50px; font-size:50px" type="button" onclick="decrementador()" value="Decrecer" />
+        </div>
+    </form>
+
+
+    <script>
+        document.onclick = doble;
+
+        function decrementador() {
+            var value = parseInt(document.getElementById('numero').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value = value - 2;
+            document.getElementById('numero').value = value;
+        }
+
+
+        function incrementador() {
+            var value = parseInt(document.getElementById('numero').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('numero').value = value;
+        }
+
+        function sonido() {
+            var music = new Audio('sonido02.ogg');
+            music.play();
+        }
+
+        function doble() {
+            incrementador();
+            sonido();
+        }
+    </script>
+
+</body>
+
+</html>
